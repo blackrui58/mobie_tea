@@ -1,0 +1,71 @@
+animate.css
+bootstrap: 栅格系统 (响应式布局)
+全局样式(作为类名方式使用)
+组件(响应式导航)
+插件(轮播图,手风琴)
+
+网页的淘宝： www.taobao.com
+移动端: https://m.taobao.com  mobile
+
+栅格系统: 将父级盒子平分为12等份(列),由你自己去设置你要的盒子占据的等份数量
+
+.container>.row>.col
+
+大屏幕: >= 1200px  .lg   .col-lg
+中等屏幕: >=992px  .md   .col-md
+小屏幕:  >=768px   .sm   .col-sm
+超小屏幕: <768px   .xs   .col-xs
+
+如果一行里面,不足以显示所有的列,则会另起一起一行显示
+
+列嵌套: .container>.row>.col>.row>.col
+.container-fluid: 100%宽
+
+列偏移: col-md-offset-数字
+
+响应式工具: 
+.visible-xs: 在小屏幕下显示
+.hidden-lg: 大屏幕下隐藏
+.hidden-xs: 小屏幕隐藏
+
+对齐: .text-left center right justify(两端对齐)
+text-capitalize: 首字母大写
+
+.btn: 代表你想使用bootstrap按钮的样式
+.close: 关闭按钮 (&times)
+.caret: 三角符号 (必须用在行内元素里面)
+base.css: .fl .fr .clearfix
+.pull-left: 左浮动
+.pull-right: 右浮动
+.clearfix: 清除浮动
+.center-block: 让块级 元素居中
+
+表格: .table
+.table-striped: 条纹状表格 (隔行换色)
+.table-bordered: 表格边框
+.table-hover: 鼠标悬停效果
+
+表单:
+
+.form-control: 宽度被设置为100%
+.form-inline: 所有的表单元素排成一行显示
+
+组件:
+字体图标: 直接将对应的类名写到行内元素里面即可使用
+
+bootstrap里面的动态效果都是依赖于jq的,jq的版本一般是3.0以上
+.badge: 徽章
+
+模板: 起步-->实例精选
+
+overflow: auto;超出父元素部分通过滚动条滚动的形式显示
+
+
+导航
+
+导航项: 导航栏里面可以点击切换的文字,必须依赖于.nav,.navbar-nav
+
+.sr-only: display: none
+.icon-bar: 横线
+
+缩略图

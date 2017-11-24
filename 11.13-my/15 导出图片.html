@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			/*text-align: center;*/
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+			/*display: none;*/
+			/*width: 500px;
+			height: 500px;*/
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function () {
+		// 画布
+		var oCanvas = document.getElementById('c');
+		var oImg = document.getElementById('ii');
+		// 画笔 (上下文)
+		var oC = oCanvas.getContext('2d');
+		// 开始路径
+		oC.beginPath();
+		//移动到某个点
+		oC.moveTo(338,296);
+		// 连线到某个点
+		oC.lineTo(474,81);
+		oC.lineTo(611,294);
+		// 闭合路径
+		oC.closePath();
+		// 改变线条颜色
+		oC.strokeStyle = 'red';
+
+		// 填充色
+		oC.fillStyle = 'orange';
+		// 线宽
+		oC.lineWidth = 10;
+		// 填充操作
+		oC.fill();
+		// 画线操作
+		oC.stroke();
+		console.log(oCanvas.toDataURL())
+		document.onclick = function () {
+			// 导出的图片
+			var ss = oCanvas.toDataURL()
+			oImg.src = ss;
+		}
+
+		console.log(oCanvas.toDataURL('image/jpeg'));
+
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id="c">浏览器不支持显示</canvas>
+	<img id="ii" >
+</body>
+</html>

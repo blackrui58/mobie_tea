@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+	<title>引导页</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/link.css">
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" >
+	window.onload = function(){
+		var mySwiper = new Swiper ('.swiper-container', {
+		    direction: 'horizontal',
+		    loop: true,		    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',  
+
+		})   
+	}
+	</script>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+			<img src="img/引导页1.jpg">
+        </div>
+        <div class="swiper-slide">
+        	<img src="img/引导页2.jpg">
+        </div>
+        <div class="swiper-slide">
+        	<a href="study.html">
+        		<img src="img/引导页3.jpg">
+        	</a>
+        	
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+</body>
+</html>

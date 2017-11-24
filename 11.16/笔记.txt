@@ -1,0 +1,192 @@
+C3: 一些新样式  圆角  动画 变形 阴影 渐变 蒙版 ...
+
+圆角: border-radius: 左上 右上 右下 左下
+					 左上 右上左下 右下
+					 左上右下 右上左下
+					 所有
+
+动画: 简单动画  高级(帧)动画
+简单动画: 属性动画
+transition: 1s all ease 2s; 动画时间  所有的属性 速度 延迟时间
+谁在前面 谁就是动画时间
+
+速度:
+ease: 轻缓型
+ease-in: 先慢后快
+ease-out: 先快后慢
+linear: 匀速
+cubic-bezier(1, 2.01, 1, 1): 取值范围是0-1
+
+浏览器前缀: 12就开始使用  14年正式定位标准   
+chrome safria: webkit
+火狐: moz
+IE: ms
+opera: o
+
+先不写前缀,如果无效,加上前缀,如果还无效,说明写错了
+
+transition: 2s 1s all ease ;
+-webkit-transition: 2s 1s all ease; (chrome Firefox)
+-moz-transition: 2s 1s all ease;
+-ms-transition: 2s 1s all ease;
+
+描述你用过的浏览器的内核?
+
+内核(渲染引擎): 因为每个浏览器的内核都不一样,所以需要进行一些兼容操作
+IE: Trident
+Chrome,safria: Webkit
+Firefox: Gecko
+opera: Presto
+
+属性分写:
+transition-duration: 动画时间
+transition-delay: 延迟时间
+transition-property: 需要动画的属性 (属性名或者all)
+transition-timing-function: 速度 
+
+变形:transfrom 一般和transition结合起来使用
+scale(w,h) scaleX(): 宽 scaleY(): 高 负数是翻转效果
+translate(): 平移 translateX() translateY()
+rotate(deg) 
+transform-origin: left top bottom right center 写两个坐标 如果第二个值不写默认是center
+
+和background-position相似
+
+多个变形:transform: rotate(360deg) scale(2,2)
+
+高级动画(帧动画): 可以定义某个时间段的动画
+
+定义动画:
+@keyframes 动画名称 {
+	from {
+
+	}
+	to {
+
+	}
+}
+
+1s
+@keyframe 动画名称 {
+	0% {
+
+	}
+	50% {
+
+	}
+	100% {
+
+	}
+}
+
+使用动画: animation: 1s ease 动画名称 ;
+forwards: 停在远方
+纯数字代表次数,无限执行动画: infinite
+原路返回: alternate
+
+动画框架: animate.css
+使用框架: 要什么动画,就把对应的类名写到对应的标签里面,必须依赖.animated
+
+渐变:线性渐变  径向(圆形)渐变
+渐变至少要求两种颜色
+线性渐变: linear-gradient(方向,color,color....)
+background-image: -webkit-linear-gradient(方向,color,color....)
+方向值: left top bottom right  角度
+
+跳变: 颜色的位置重合了
+
+重复线性渐变: -webkit-repeating-linear-gradient(),颜色要从0%开始
+
+径向(圆形)渐变: 
+radial-gradient(形状,color,color): 从中心点开始
+形状: circle ellipse
+radial-gradient(x y,rx ry,color,color) : 
+x y: 圆心点的位置
+rx ry: 水平和垂直方向的半径
+
+阴影:
+盒子阴影: box-shadow
+[inset] 水平方向的偏移量,垂直方向的偏移量 模糊度 阴影的颜色
+文字阴影: text-shadow
+
+倒影: -webkit-box-reflect: 方向 距离 渐变
+方向: left right above(上面) below(下面)
+渐变: linear-gradient(rgba(0,0,0,0.2) 20%,rgba(0,0,0,0.8) 80%)
+
+蒙版: -webkit-mask  和 background类似
+	  -webkit-mask-image
+	  -webkit-mask-position
+
+PC端: 兼容
+移动端布局: 只需要兼容webkit,chrome safria  手机尺寸不一样
+	
+	iphone5: 320 * 568
+	iphone6,6s: 375 * 667
+	iphone6p: 414 * 736
+
+	安卓: 320-640
+要想移动端的内容显示和PC一样,加上视口
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+user-scalable: 是否允许缩放
+
+导航自适应:
+
+box-sizing:
+	content-box: 内容+padding+border 往外面扩大
+	border-box: 往里面挤
+calc( - ): 加减必须带px;乘除是倍数的关系
+
+弹性盒子: flex
+
+给父盒子设置display: flex;
+给子盒子设置弹性系数: flex: 
+
+如果子元素有宽度,会写刨除这份宽度,然后再按比例平分剩余的宽
+
+overflow-x: 超出父元素的水平方向裁剪
+overflow-y
+面试题:
+1.一行两个盒子,左边固定200宽,右边盒子自适应宽度
+
+2.中间盒子固定宽200,左右自适应
+
+只要给父盒子设置了display: flex,那么子盒子就会水平排列,抛弃浮动
+水平垂直排列
+给父盒子设置
+水平:
+justify-content:
+flex-start: 左
+flex-end: 右
+center: 中间
+space-between
+space-around
+
+垂直:
+align-items:
+flex-start: 上面
+flex-end: 底部
+center: 居中
+
+移动端布局: 
+相对单位布局: 
+vw: 相对于设备宽布局
+1vw = 视口宽 * 0.01 
+
+rem: rootElement em  html: 相对于根元素的字体大小来匹配
+
+font-size  20
+width     320
+
+一般设计师给你的是2倍图:
+ 
+ 640 * 1136
+
+ ps: 640
+
+ width:  ps / 2 / 20  ps / 40
+
+ ps: 35
+
+ swiper: 轮播图
+
+ 响应式布局

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		@keyframes donghua {
+			0% { 
+				/*from*/
+				width: 100px;
+			}
+			25% {
+				/* 0.25 */
+				transform: scale(2,2);
+			}
+			50% {
+				transform: translate(100px,100px);
+			}
+
+			75% {
+				transform: rotate(180deg);
+			}
+			100% {
+				border-radius: 50%;
+			}
+		}
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 200px auto;
+			animation: 5s ease donghua infinite alternate;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

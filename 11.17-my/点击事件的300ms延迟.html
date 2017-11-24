@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0 ">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+		div:active{
+			background: #ccc;
+		}
+	</style>
+	<script type="text/javascript" src="fastclick.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oDiv = document.getElementsByTagName('div')[0];
+			
+
+
+			//这要追溯至 2007 年初。苹果公司在发布首款 iPhone 前夕，遇到一个问题 —— 当时的网站都是为大屏幕设备所设计的。于是苹果的工程师们做了一些约定，应对 iPhone 这种小屏幕浏览桌面端站点的问题。这当中最出名的，当属双击缩放(double tap to zoom)。这也是会有上述 300 毫秒延迟的主要原因。
+
+			//当用户一次点击屏幕之后，浏览器并不能立刻判断用户是要进行双击缩放，还是想要进行单击操作。因此，iOS Safari 就等待 300 毫秒，以判断用户是否再次点击了屏幕。
+
+			//于是，300 毫秒延迟就这么诞生了。
+
+
+
+
+			//上面在style中添加了一个点击改变背景色的样式属性
+			//理论上当点击的时候,应该立马alert一下,然后改变背景的颜色
+			
+
+			//如何消除300ms延迟的
+			//1.强制让移动端网页禁止缩放//则不会出现双击放大的效果
+			//2.在引入fastclick.js框架之后,在script中写入以下代码   
+			//FastClick.attach(document.body);
+			//3.用zepto框架的tap替代click事件
+			oDiv.onclick = function(){
+				alert(3)
+			}
+		}
+	</script>
+</head>
+<body>
+	<div></div>
+	<!-- 当页面有一堆超过页面的文字时,双击页面会出现放大页面的效果 -->
+	<!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
+</body>
+</html>

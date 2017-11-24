@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			text-align: center;
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+			/*width: 500px;
+			height: 500px;*/
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function () {
+		// 一,获取画布
+		var oCanvas = document.getElementById('c');
+		//二,创建画笔//通过画布来创建画笔//画笔也称为上下文
+		var oC = oCanvas.getContext('2d');
+		//三,对画笔开始操作
+		//1.开始一次新的路径
+		oC.beginPath();
+		//2.起点
+		oC.moveTo(325,250);
+		oC.lineTo(481,246);
+		oC.lineTo(532,116);
+		oC.lineTo(576,246);
+
+		oC.lineTo(725,255);
+		oC.lineTo(611,332);
+		oC.lineTo(654,463);
+		oC.lineTo(528,390);
+		oC.lineTo(408,464);
+		oC.lineTo(445,332);
+
+		oC.closePath(611,332);
+
+		oC.strokeStyle = 'yellow'
+		oC.lineWidth = 5;
+		
+		oC.fillStyle = 'orange'
+		oC.fill()
+		oC.stroke()
+
+
+
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id="c">浏览器不支持显示</canvas>
+</body>
+</html>

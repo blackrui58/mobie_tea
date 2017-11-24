@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			text-align: center;
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+			/*width: 500px;
+			height: 500px;*/
+		}
+	</style>
+	<script type="text/javascript">
+	// function random(n,m) {
+	// 	return Math.floor(Math.random() * (m - n) + n);
+	// }
+	// window.onload = function () {
+	// 	var oCanvas = document.getElementById('c');
+	// 	// 画笔
+	// 	var oC = oCanvas.getContext('2d');
+
+	// 	var arr = [];
+
+	// 	for (var i = 0;i < 100;i++) {
+	// 		arr.push({
+	// 			x: random(0,oCanvas.width),
+	// 			y: random(0,oCanvas.height)
+	// 		});
+	// 	}
+
+	// 	// 开始路径
+	// 	oC.beginPath();
+	// 	oC.moveTo(100,100);
+
+	// 	for (var i = 0;i < arr.length;i++) {
+	// 		oC.lineTo(arr[i].x,arr[i].y);
+	// 	}
+	// 	oC.closePath();
+	// 	oC.stroke();
+	// }
+
+
+
+	//随机数函数
+	function random(n,m){
+		return Math.floor(Math.random() *(m - n) + n)
+	}
+	console.log(random(1,100))
+	window.onload = function(){
+		var oCanvas = document.getElementById('c');
+		var arr = [];
+		//随机生成一个数据,添加给对象的属性,并放到数组中去
+		for(var i = 0;i<100;i++){
+			arr.push({
+				x: random(0,oCanvas.width),
+				y: random(0,oCanvas.height)
+			})
+		}
+		console.log(arr)
+		//创建画笔
+		var pp = oCanvas.getContext('2d')
+		//开始
+
+	}
+
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id="c"></canvas>
+</body>
+</html>

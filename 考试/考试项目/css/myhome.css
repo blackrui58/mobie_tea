@@ -1,0 +1,195 @@
+/* 111最顶端::无用部分*/ 
+#none{
+	width: 7.5rem;
+	height: 0.4rem;
+	background: #ccc;
+}
+/* 222头部标题部分*/ 
+#header{
+	width: 7.5rem;
+	height: 0.88rem;
+	background: #fff;
+	line-height: 0.88rem;
+	text-align: center;
+	font-size: 34px;
+}
+
+/*333::my*/
+#my{
+	width: 6.84rem;
+	height: 4.05rem;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+#my .setting{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0.38rem;
+	height: 0.38rem;
+}
+#my .icon{
+	width: 1.44rem;
+	height: 1.44rem;
+	display: block;
+	margin: 0.22rem auto 0.4rem;
+	border-radius: 50%;
+}
+#my h5{
+	text-align: center;
+	font-size: 0.28rem;
+	margin-bottom: 0.2rem;
+}
+#my .rank{
+	width: 2.7rem;
+	height: 0.28rem;
+	margin: 0 auto;
+	position: relative;
+}
+#my .rank .bottom{
+	width: 1.6rem;
+	height: 0.12rem;
+	background: #EEEEEE;
+	border-radius: 0.06rem;
+	float: left;
+	margin-top: 0.08rem;
+}
+#my .rank .top{
+	width: 0.6rem;
+	height: 0.12rem;
+	background: #FEBB64;
+	border-radius: 0.06rem;
+	float: left;
+	position: absolute;
+	left: 0;
+	top:0.08rem;
+
+}
+#my .rank .range{
+	font-size: 0.23rem;
+	color:#FEBB64;
+	float: right;
+}
+
+#my .sum{
+	display: flex;
+	width: 4.6rem;
+	height: 0.4rem;
+	margin: 0.5rem auto 0;
+	justify-content:space-between;
+}
+#my .sum .item{
+
+}
+#my .sum .item .num{
+	display: block;
+	float: left;
+	font-size: 0.33rem;
+	color:#555555;
+}
+#my .sum .item .text{
+
+	display: block;
+	float: right;
+	font-size: 0.23rem;
+	color:#999999;
+	margin: 0.06rem 0 0 0.1rem;
+}
+
+/*444::sort:::分类 */
+#sort{
+	width: 7.5rem;
+	height: 1.2rem;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	border-bottom: 0.01rem solid #EDEDED;
+	border-top: 0.01rem solid #EDEDED;
+}
+
+#sort .item{
+	width: 0.48rem;
+	height: 0.82rem;
+}
+#sort .item img{
+	display: block;
+	width: 0.43rem;
+	height: 0.43rem;
+}
+#sort .item span{
+	margin-top: 0.16rem;
+	display: block;
+	font-size: 0.23rem;
+	text-align: center;
+	color: #999999;
+}
+
+/* 555作品  */
+#myzuoping{
+
+}
+#myzuoping .top{
+	width: 7.5rem;
+	height: 0.88rem;
+	line-height: 0.88rem;
+	font-size: 0.28rem;
+	color:#363636;
+	text-indent: 0.3rem;
+}
+#myzuoping .items{
+	
+}
+#myzuoping .items img{
+	width: 7.5rem;
+	height: 5.54rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* 替代display:fixed占据屏幕位置*/ 
+#tonav{
+	width: 7.5rem;
+	height: 0.89rem;
+}
+/* 最低层的::tabs::4个*/ 
+#nav{
+	width: 7.5rem;
+	height: 0.89rem;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content:space-around;
+}
+
+#nav a{
+	display: block;
+	position: relative;
+	color: #ADADAD;
+}
+#nav a.active{
+	color: #FBB556;
+}
+#nav a img{
+	display: block;
+	width: 0.52rem;
+	height: 0.52rem;
+	margin: 0 0 0 0.08rem;
+	position: absolute;
+	top: 0.06rem;	
+}
+#nav a p{
+	font-size: 0.2rem;
+	text-align: center;
+	margin-top: 0.6rem;
+	// position: absolute;
+	// bottom: 0.08rem;
+}

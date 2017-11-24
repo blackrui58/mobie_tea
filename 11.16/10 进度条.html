@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		
+		@keyframes jindutiao {
+			form {
+				left: 0;
+			}
+			to {
+				left: -200px;
+			}
+		}
+
+		#box {
+			width: 200px;
+			height: 40px;
+			background: #ccc;
+			position: relative;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+		#box div {
+			width: 400px;
+			height: 40px;
+			/*background: -webkit-linear-gradient(top,#fff 20%,blue 20%,blue 40%,#fff 40%,#fff 60%,blue 60%);*/
+			background: -webkit-repeating-linear-gradient(45deg,red 0%, red 2%,blue 2%,blue 4%);
+			position: absolute;
+			left: 0;
+			animation: 3s linear jindutiao infinite;
+		}
+	</style>
+</head>
+<body>
+
+<div id="box">
+	<div></div>
+</div>
+	
+</body>
+</html>

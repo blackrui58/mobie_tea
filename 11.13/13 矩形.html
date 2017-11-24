@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			text-align: center;
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+			/*width: 500px;
+			height: 500px;*/
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function () {
+		// 画布
+		var oCanvas = document.getElementById('c');
+		// 画笔 (上下文)
+		var oC = oCanvas.getContext('2d');
+		// 开始路径
+		oC.beginPath();
+		oC.lineWidth = 10;
+		oC.strokeStyle = 'red';
+		oC.fillStyle = 'red';
+
+		// 连接点
+		oC.lineJoin = 'bevel'; 
+		// 直接就绘制出矩形
+		oC.strokeRect(100,100,200,200);
+		// oC.fillRect(100,100,200,200);
+		// oC.stroke()
+
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id="c">浏览器不支持显示</canvas>
+</body>
+</html>

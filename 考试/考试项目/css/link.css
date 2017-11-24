@@ -1,0 +1,17 @@
+
+
+.swiper-container .swiper-container-horizontal {
+    width: 7.5rem;
+    height: 13.34rem;
+    background: red;
+}  
+
+.swiper-slide{
+	width: 7.5rem;
+    height: 13.34rem;
+    background: red;
+}
+.swiper-slide img{
+	width: 7.5rem;
+    height: 13.34rem;
+}

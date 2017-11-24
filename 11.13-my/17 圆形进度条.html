@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			/*text-align: center;*/
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+			/*width: 500px;
+			height: 500px;*/
+		}
+	</style>
+	<script type="text/javascript">
+
+	// 角度转弧度
+	function d2h (n) {
+		return n * Math.PI / 180;
+	}
+
+	window.onload = function () {
+		// 画布
+		var oCanvas = document.getElementById('c');
+		var oImg = document.getElementById('ii');
+		// 画笔 (上下文)
+		var pen = oCanvas.getContext('2d');
+
+		//先设置一个背景色圈
+		pen.beginPath();
+		pen.lineWidth  = 10;
+		pen.strokeStyle = "#ccc"
+		pen.arc(300,300,100,0,d2h(360),false)
+		pen.stroke()
+
+		//对前景色进行设置
+		var d = -1;
+		setInterval(function(){
+			//开始一次弧度的设置
+			pen.beginPath();
+			pen.lineWidth = 10;
+			pen.strokeStyle = 'orange';
+			d++;
+			pen.arc(300,300,100,d2h(-90),d2h(d - 90),false);
+			pen.stroke()
+		},16)
+
+		// oC.beginPath();
+		// oC.lineWidth = 10;
+		// oC.strokeStyle = '#ccc';
+		// oC.arc(300,300,100,0,d2h(360),false);
+		// oC.stroke();
+		// var d = -1;
+		// setInterval(function () {
+		// 	// 开始路径
+		// 	oC.beginPath();
+		// 	oC.lineWidth = 10;
+		// 	oC.strokeStyle = 'orange';
+		// 	d++;
+		// 	if (d == 360) {
+		// 		d = 360;
+		// 	}
+		// 	// oC.clearRect(0,0,oCanvas.width,oCanvas.height);
+		// 	oC.arc(300,300,100,d2h(-90),d2h(d - 90),false);
+		// 	oC.stroke();
+		// },16);
+
+		
+
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id="c">浏览器不支持显示</canvas>
+</body>
+</html>

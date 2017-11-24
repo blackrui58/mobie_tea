@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			text-align: center;
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+			/*width: 500px;
+			height: 500px;*/
+		}
+	</style>
+	<script type="text/javascript">
+	//将角度转换为弧度的函数
+	//Math.PI 获取数学中的π
+	function topai(n){
+		return n*Math.PI / 180
+	}
+
+
+	// // 角度转弧度
+	// function d2h (n) {
+	// 	return n * Math.PI / 180;
+	// }
+	window.onload = function () {
+		// 画布
+		var oCanvas = document.getElementById('c');
+
+
+		// 画笔 (上下文)
+		var oC = oCanvas.getContext('2d');
+		//对于圆,//不能和矩形一样,不stroke//矩形需要stroke
+		oC.beginPath();
+
+		//先确定圆心
+		oC.moveTo(100,100);
+		//画圆的方程//最后的false代表顺时针
+		oC.arc(100,100,50,0,topai(90),false)
+		oC.closePath();
+
+		oC.fillStyle = 'red';
+
+		oC.stroke();
+		oC.fill();
+
+
+		// // 开始路径
+		// oC.beginPath();
+		// // 移到圆心
+		// // oC.moveTo(300,300);
+		
+		// oC.arc(300,300,100,0,d2h(360),false);
+
+		// // oC.closePath();
+		// oC.fillStyle = 'red';
+		// // 画线
+		// // oC.stroke();
+		// oC.fill();
+
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id="c">浏览器不支持显示</canvas>
+</body>
+</html>

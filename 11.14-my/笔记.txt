@@ -1,0 +1,175 @@
+video audio
+controls: 控制器
+loop: 循环播放
+poster: 海报
+src: 资源
+video
+	source src
+/video
+
+js:
+play(): 播放
+pause(): 暂停
+paused: 是否暂停
+currentTime: 当前时间
+duration: 总时间
+
+webkitRequestFullScreen: 全屏
+
+webkitFullScreenChange: 全屏事件
+
+timeupdate: 播放时间改变
+
+表单的新属性:
+min  max  required  pattern  autocomplete="off" 
+关闭表单自动验证: novalidate
+新的type值: number time date email range
+
+选择器
+
+:nth-child(): 下标从1开始,odd,even
+:first-child
+:last-child
+
+:first-letter
+:first-line
+:after
+:before  (结合content属性使用)
+
+获取元素的方式:
+id,className,tagName,
+querySelectorAll(选择器): 多个值
+querySelector(选择器): 一个值
+
+oDiv.classList.add(): 添加类名
+oDiv.classList.remove(): 删除类名
+oDiv.classList.toggle():有就删除,无则添加
+
+h5允许用户自定义属性: data-属性名 
+oDiv.dataset.属性
+---------------------------------------------------------
+
+canvas绘图:
+1.beginPath()
+
+2.moveTo(x,y)
+
+3.lineTo(x,y)
+	lineWidth  strokeStyle fillStyle
+4.stroke fill
+
+5.closePath()
+
+画矩形: strokeRect(x,y,w,h)   fillRect(x,y,w,h)  直接画出矩形
+
+画弧: arc(cx,cy,r,start,end,false): 弧度制
+
+角度转弧度:
+function d2h (n) {
+	return n * Math.PI / 180
+}
+
+
+画图片: drawImage(image对象,x,y): 画到画布的某个位置,图片是原图大小
+
+		drawImage(image对象,x,y,w,h): 画到画布的某个位置,图片是w,h
+
+		drawImage(image对象,sx,sy,sw,sh,dx,dy,dw,dh): 把原图上的某个位置的图形放画到画布的某个位置上去
+
+		s: source: 原图
+		d: 目标: 目标的大小控制了图片的显示大小
+
+原图: 17 196 110 150
+
+目标位置: 100 100 110 150
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

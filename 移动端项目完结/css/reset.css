@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li,ol li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;    
+}
+
+input, textarea, select, button { 
+    font-size: 100%; 
+    font-family: inherit; 
+} 
+select { 
+    margin: inherit; 
+} 
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+/* Fixes incorrect placement of numbers in ol’s in IE6/7 */ 
+
+/* == clearfix == */ 
+.clearfix:after { 
+    content:""; 
+    display: block;    
+    clear: both; 
+} 

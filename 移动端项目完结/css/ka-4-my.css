@@ -1,0 +1,188 @@
+html{
+	font-size: 13.33333333vw;
+}
+#app{
+	width: 7.5rem;
+	height: 13.34rem;
+	background: #EEEEEE;
+}
+#phonetop{
+	width: 7.5rem;
+	height: 0.42rem;
+	background: red;
+}
+#top{
+	width: 7.50rem;
+	height: 0.74rem;
+	margin: 0 auto;
+	background: #fff;
+	font-size: 0.34rem;
+	text-align: center;
+	line-height: 0.74rem;
+	border-bottom: 1px solid #D6D6D6;
+
+}
+/*公共采用的样式部分*/
+.mypage{
+	color:#999999;
+	line-height:0.9rem;
+
+}
+.mypage:hover{
+	color:#777777;
+}
+.mypage span:nth-child(1){
+	float: left;
+	display: block;
+	font-size: 0.24rem;
+	margin-left: 0.3rem;
+}
+.mypage span:nth-child(3){
+	float: right;
+	display: block;
+	font-size: 0.24rem;
+	margin-right: 0.2rem;
+}
+.mypage span:nth-child(2){
+	float: right;
+	display: block;
+	width: 0.18rem;
+	height: 0.3rem;
+	background: url(../img/you.jpg);
+	background-size:0.18rem  0.3rem;
+	margin-top: 0.3rem;
+	margin-right: 0.3rem;
+}
+/*我的信息*/
+
+#myinfo{
+	display: block;
+	width: 100%;
+	height: 1.2rem;
+	background: #fff;
+	margin-top: 0.1rem;
+	border-bottom: 1px solid #D6D6D6;
+	border-top: 1px solid #D6D6D6;
+
+}
+#myinfo img{
+	display: block;
+	float: left;
+	width: 0.98rem;
+	height: 0.98rem;
+	margin:0.1rem 0.2rem 0 0.3rem;
+}
+#myinfo span.center{
+	float: left;
+	overflow: hidden;
+}
+#myinfo span.center h5{
+	margin-top: 0.26rem;
+	font-size: 0.3rem;
+	color:#333333;
+}
+#myinfo span.center p{
+	margin-top: 0.10rem;
+	font-size: 0.3rem;
+	color:#989898;
+}
+#myinfo span.right{
+	float: right;
+	display: block;
+	width: 0.18rem;
+	height: 0.3rem;
+	background: url(../img/you.jpg);
+	background-size:0.18rem  0.3rem;
+	margin-top: 0.3rem;
+	margin-right: 0.3rem;
+}
+/*我的优惠券*/
+
+#youhui{
+	display: block;
+	width: 100%;
+	height: 0.9rem;
+	background: #fff;
+	margin-top: 0.1rem;
+	border-bottom: 1px solid #D6D6D6;
+	border-top: 1px solid #D6D6D6;
+
+}
+
+#youhui span:nth-child(1){
+	background:  url(../img/youhuiicon.jpg) no-repeat 0.14rem;
+	background-size: 0.32rem 0.28rem;
+	float: left;
+	display: block;
+	font-size: 0.24rem;
+	margin-left: 0.26rem;
+	padding-left: 0.6rem;
+}
+
+/*订单::客服电话::用户反馈::关于*/
+ 
+#about{
+	width: 100%;
+	height: 3.63rem;
+	border-top: 1px solid #D6D6D6;
+	margin-top: 0.1rem;
+}
+#about a{
+	display: block;
+	width: 100%;
+	height: 0.9rem;
+	background: #fff;
+	border-bottom: 1px solid #D6D6D6;
+}
+
+/*设置*/ 
+#setting{
+	display: block;
+	width: 100%;
+	height: 0.9rem;
+	background: #fff;
+	margin-top: 0.1rem;
+	border-bottom: 1px solid #D6D6D6;
+	border-top: 1px solid #D6D6D6;
+
+}
+
+
+
+/*底部:::tabs*/
+#footcontent{
+	width: 5.9rem;
+	height: 0.75rem;
+	
+	margin: 0 auto;
+	display:flex;
+	justify-content:space-between;
+}
+
+#footcontent .left,#footcontent .center,#footcontent .right{
+	
+	
+}
+#footcontent a{
+	color:#999999;
+	font-size: 0.2rem;
+}
+#footcontent img{
+	width: 0.52rem;
+	height: 0.46rem;
+}
+#footcontent a p{
+	
+}
+
+
+#foottab{
+	background: #fff;
+	position: fixed;
+	bottom:0rem;
+	width: 7.5rem;
+	height: 0.75rem;
+	font-size: 0.2rem;
+	color:#ccc;
+	padding: 0.16rem 0 0.1rem 0 ;
+}

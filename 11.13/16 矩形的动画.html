@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			/*text-align: center;*/
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+			/*width: 500px;
+			height: 500px;*/
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function () {
+		// 画布
+		var oCanvas = document.getElementById('c');
+		var oImg = document.getElementById('ii');
+		// 画笔 (上下文)
+		var oC = oCanvas.getContext('2d');
+		// 开始路径
+		oC.beginPath();
+
+		var d = 100;
+		
+		setInterval(function () {
+			d+=5;
+			// 先清空画布
+			oC.clearRect(0,0,oCanvas.width,oCanvas.height);
+			oC.strokeRect(100,100,d,100);
+		},16);
+
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id="c">浏览器不支持显示</canvas>
+</body>
+</html>

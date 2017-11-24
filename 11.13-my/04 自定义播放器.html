@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		.bottom {
+			width: 500px;
+			height: 5px;
+			background: #ccc;
+		}
+		.top {
+			width: 250px;
+			height: 5px;
+			background: orange;
+		}
+		#w {
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+
+		a:hover {}
+		/* 去除自带的播放器样式 */
+		video::-webkit-media-controls {display: none;}
+	</style>
+	<script type="text/javascript">
+	window.onload = function () {
+		var oV = document.getElementById('v');
+		var oW = document.getElementById('w');
+
+		var oT = document.getElementsByClassName('top')[0];
+
+		var oB = document.getElementsByClassName('bottom')[0];
+
+		var oPlay = document.getElementById('play');
+
+		var oJ = document.getElementById('kuaijin');
+
+		var jia = document.getElementById('jia');
+
+		var jingyin = document.getElementById('jingyin');
+
+		var quanping = document.getElementById('quanping');
+
+
+
+		oPlay.onclick = function () {
+			
+			if (oV.paused) {
+				// 暂停状态
+				// 播放
+					oV.play();
+					this.innerHTML = '暂停'
+				} else {
+					oV.pause();
+					this.innerHTML = '播放'
+				}
+
+		}
+
+		oJ.onclick = function () {
+			// 当前播放时间
+			oV.currentTime++;
+			// 快退就--
+			console.log(oV.currentTime);
+		}
+
+		jia.onclick = function () {
+			// 当前音量
+			oV.volume -= 0.1;
+			if (oV.volume <= 0) {
+				oV.volume = 0;
+			}
+		}
+
+		jingyin.onclick = function () {
+			// 此时静音状态
+			oV.muted = !oV.muted;
+			console.log(oV.muted);
+		}
+
+		// 当时间更新的时候
+		oV.ontimeupdate = function () {
+			// 总时间: duration
+			var scale = oV.currentTime / oV.duration;
+
+			// 设置top宽
+			oT.style.width = scale * oB.offsetWidth + 'px';
+
+		}
+
+		quanping.onclick = function () {
+			// 全屏
+			if (oV.requestFullScreen) {
+				oV.requestFullScreen();
+			} else if (oV.webkitRequestFullScreen) {
+				oV.webkitRequestFullScreen();
+			} else if (oV.mozRequestFullScreen) {
+				oV.mozRequestFullScreen();
+			}
+
+		}
+
+		// 全屏事件应该用事件监听的形式
+		oV.addEventListener('webkitfullscreenchange',function () {
+			if (document.webkitIsFullScreen) {
+				oW.style.zIndex = 214748364711;
+			}
+		},false);
+
+	}
+	</script>
+</head>
+<body>
+	<video src="周二珂 - 告白气球.mkv" id="v" autoplay></video>
+	<div id="w">
+		<button id="play">播放</button>
+		<button id="kuaijin">快进</button>
+		<button id="kuaitui">快退</button>
+		<button id="jia">++</button>
+		<button id="jian">--</button>
+		 <button id="jingyin">静音</button>
+		 <button id="quanping">全屏</button>
+		 <div class="bottom">
+		 	<div class="top"></div>
+		 </div>
+	</div>
+</body>
+</html>

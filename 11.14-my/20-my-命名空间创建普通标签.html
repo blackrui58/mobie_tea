@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+	//创建svg内部元素的时候,必须用命名空间创建方法来创建
+	//那对于普通标签,即可以采用普通的创建的方法,也可以采用命名空间创建的方法来创建
+
+	//普通方法创建普通元素,如div
+	// var oDiv = document.createElement('div')
+	//命名空间创建普通元素的方法,如div
+	var oDivSN = document.createElementNS('http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd','div')
+
+	//
+	oDivSN.innerHTML = '111';
+	//对于普通标签,不管其用什么方式创建的,都可以用一般的方法对其添加属性
+	oDivSN.id = 'guorui'
+	document.body.appendChild(oDivSN);
+
+	// var s = document.getElementsByTagNameNS('http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd','div');
+	// console.log(s);
+</script>

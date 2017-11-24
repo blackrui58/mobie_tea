@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+		svg {
+			background: #fff;
+		}
+		
+	</style>
+</head>
+<body>
+	<svg width="800" height="500">
+		<rect x="100" y="100" width="200" height="200" fill="orange" style="stroke: red;stroke-width:10">
+		</rect>
+
+	</svg>
+</body>
+</html>
+<script type="text/javascript">
+	window.onload = function(){
+		var oR = document.getElementsByTagName('rect')[0];
+		oR.onclick = function(){
+			// oR.setAttribute('x','200')
+			// oR.setAttribute('width','400')
+			oR.style.strokeWidth = 20
+		}
+	}
+</script>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+	<title>study页</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/study.css">
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" >
+	window.onload = function(){
+		// 顶部第一个轮播图
+		var mySwiper = new Swiper ('.swiper-container-1', {
+		    direction: 'horizontal',
+		    loop: true,		    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',  
+
+		})  
+		//第二个轮播图
+	    var swiper = new Swiper('.swiper-container-2', {
+	      slidesPerView: 4,
+	      centeredSlides: true,
+	      spaceBetween: 30,
+	      grabCursor: true,
+	      pagination: {
+	        el: '.swiper-pagination',
+	        clickable: true,
+	      },
+	    });
+  
+	}
+	</script>
+</head>
+<body>
+<!-- 111最顶端::无用部分 -->
+<div id="none"></div>
+
+<!-- 222头部标题部分 -->
+<header id="header">
+	学烘焙
+</header>
+<!-- 333顶部轮播图 -->
+<div class="swiper-container-1">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+			<a href="#">
+        		<img src="img/study-swiper-1.jpg">
+        	</a>  
+        </div>
+        <div class="swiper-slide">
+        	<a href="#">
+        		<img src="img/study-swiper-1.jpg">
+        	</a>  
+        </div>
+        <div class="swiper-slide">
+        	<a href="#">
+        		<img src="img/study-swiper-1.jpg">
+        	</a>        	
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- 444分类食谱 -->
+<div id="sort">
+	<div class="top">
+		分类食谱
+	</div>
+	<div class="bottom">
+		<div class="swiper-container-2 swiper-container-horizontal" style="cursor: -webkit-grab;">
+		    <div class="swiper-wrapper" style="transform: translate3d(-50.625px, 0px, 0px); transition-duration: 0ms;">
+		      <div class="swiper-slide swiper-slide-active" style="width: 1.77rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-1.jpg" >
+		      </div>
+		      <div class="swiper-slide swiper-slide-next" style="width: 177rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-2.jpg">
+		      </div>
+		      <div class="swiper-slide swiper-slide-next" style="width: 177rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-3.jpg">
+		      </div>
+		      <div class="swiper-slide swiper-slide-next" style="width: 177rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-1.jpg">
+		      </div>
+		      <div class="swiper-slide swiper-slide-next" style="width: 177rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-2.jpg">
+		      </div>
+		      <div class="swiper-slide swiper-slide-next" style="width: 177rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-3.jpg">
+		      </div>
+		      <div class="swiper-slide swiper-slide-next" style="width: 177rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-3.jpg">
+		      </div>
+		      <div class="swiper-slide swiper-slide-next" style="width: 177rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-3.jpg">
+		      </div>
+		      <div class="swiper-slide swiper-slide-next" style="width: 177rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-3.jpg">
+		      </div>
+		      <div class="swiper-slide swiper-slide-next" style="width: 177rem; margin-right: 20rem;">
+		      	<img src="img/swiper-2-3.jpg">
+		      </div>
+		      
+		    </div>
+		    <!-- Add Pagination -->
+			 <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+			    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+			    <span class="swiper-pagination-bullet"></span>
+			    <span class="swiper-pagination-bullet"></span>
+			    <span class="swiper-pagination-bullet"></span>
+			    <span class="swiper-pagination-bullet"></span>
+			    <span class="swiper-pagination-bullet"></span>
+			    <span class="swiper-pagination-bullet"></span>
+			    <span class="swiper-pagination-bullet"></span>
+			    <span class="swiper-pagination-bullet"></span>
+			    <span class="swiper-pagination-bullet"></span>
+		    </div>
+		</div>
+	</div>
+</div>
+<!-- 每日精选 -->
+<div id="choice">
+	<div class="top">
+		每日精选
+	</div>
+	<a class="bottom">
+		<img src="img/choice-1.jpg" alt="">
+	</a>
+</div>
+<!-- 替代display:fixed占据屏幕位置 -->
+<div id="tonav"></div>
+<!-- 最低层的::tabs::4个 -->
+<nav id="nav">
+	<a href="study.html" class="active">
+		<img src="img/study.jpg">
+		<p>学烘焙</p>
+	</a>
+	<a href="story.html">
+		<img src="img/story.jpg">
+		<p>有故事</p>
+	</a>
+	<a href="sharenew.html">
+		<img src="img/share.jpg">
+		<p>分享圈</p>
+	</a>
+	<a href="myhome.html">
+		<img src="img/myhome.jpg">
+		<p>焙小窝</p>
+	</a>
+</nav>
+</body>
+</html>

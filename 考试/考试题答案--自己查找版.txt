@@ -1,0 +1,107 @@
+一,填空
+1.  mp4,avi,
+1.  ogg wmp
+
+2.  
+2.volume
+
+
+3.  <audio>
+
+4.  border-radius   左上角  右上角  右下角 左下角
+
+5.  box-shadow 
+5.  h-shadow w-shadow blur spread color inset
+
+
+6.  background-size 100% 100%
+
+7.  oCanvas.getContent('2d')
+7.  oCanvas.getContext('2d')
+
+
+8.  moveTo()  closePath()
+8.  beginPath() closePath()
+
+
+二,简答题
+1.<header>  语义化头部信息
+  <container>  语义化身体信息//<section>
+  <footer>  语义化尾部信息
+  <svg>  矢量图
+  <canvas>  位图
+1.<nav><meter><source>
+
+2.number  正则对数据进行验证
+  email 正则对email进行验证
+  
+  url
+  color
+  search
+  range
+  date  自动初始化日期插件功能
+  time
+  month
+  week
+  datetime
+
+3.
+(1)chrome safari :::webkit::::webkit
+(2)firefox :::gecko::::moz
+(3)ie:::trident:::ms
+
+4.
+spaceholder
+box-shadow
+border-radius
+4.
+required
+autocomplete
+step
+pattern
+autofocus
+
+
+5.
+svg:(1)矢量图绘图,不会失真
+    (2)通过标签来绘图
+    (3)有属性,有事件
+    (4)适合做交互性比较多的
+
+canvas:(1)位图绘图,放大会失真
+       (2)通过js来绘图
+       (3)没有属性,没有事件
+       (4)适合做一些小游戏
+
+
+6.会结合<source>标签进行使用
+主要就是加载不同格式的音视频文件,解决不同浏览器支持不同文件类型的问题
+
+7.媒体查询  
+.container > .row > .col
+
+8.移动端有一个双击放大的功能,当第一次点击的时候,浏览器无法立马判断是要单击还是双击,就有一个300ms的延迟,用来进行判断
+解决方法:
+(1)在meta标签中,禁止网页缩放
+(2)用FastClick框架
+(3)用zepto框架的tap事件代替click
+
+9.对于覆盖到一起的两个元素,若在上面这个元素的touchstart事件中就对上面的这个元素进行了隐藏,那么后续的touchmove及touchend就会作用于下面的这个元素
+解决方法
+(1)阻止默认事件evt.preventDefault()
+(2)用fastclick框架
+
+10.
+display:flex
+flex:数值
+
+水平布局:属性::justify-content
+         属性值::flex-start  左对齐
+                 flex-end  右对齐
+                 center  居中
+                 space-between  左右对齐,中间平分
+                 space-around  空间平分,元素在空间中居中
+竖直布局:属性::align-items
+         属性值:flex-start 上对齐
+                flex-end  下对齐
+                center  垂直居中对齐

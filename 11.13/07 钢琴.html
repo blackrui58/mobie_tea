@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		ul {
+			display: flex;
+		}
+		li {
+			flex: 1;
+			float: left;
+			height: 300px;
+			background: #ccc;
+			border: 1px solid #000;
+			text-align: center;
+			font-size: 30px;
+			line-height: 300px;
+		}
+		.on {
+			background: #333;
+		}
+	</style>
+	<script type="text/javascript" src="sound.js"></script>
+	<script type="text/javascript">
+	window.onload = function () {
+		var aLi = document.getElementsByTagName('li');
+		for (var i = 0;i < aLi.length;i++) {
+			aLi[i].onmousedown = function () {
+				// 先清空所有
+				for (var j = 0;j < aLi.length;j++) {
+					aLi[j].className = ''
+				}
+				// 再给自己添加
+				this.className = 'on';
+				//创建声音
+				var audio =  new Audio();
+				audio.src = oggSound[this.innerHTML];
+				audio.play();
+				return false;
+			}
+			aLi[i].onmouseup = function () {
+				this.className = '';
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</ul>
+</body>
+</html>

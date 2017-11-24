@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			height: 100000px;
+			overflow-x: hidden;
+		}
+		/*一行两个盒子,左边固定200宽,右边盒子自适应宽度*/
+		div {
+			height: 50px;
+			
+		}
+		div:nth-child(1) {
+			background: rgba(255,0,0,0.5);
+			width: 200px;
+			float: left;
+		}
+		div:nth-child(2) {
+			background: blue;
+			width: 100%;
+			float: right;
+			margin-right: -200px;			
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+</body>
+</html>

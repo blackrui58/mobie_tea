@@ -1,0 +1,213 @@
+body{
+	width: 7.5rem;
+	height: 13.34rem;
+	background: #F7F7F7;
+}
+/* 111最顶端::无用部分*/ 
+#none{
+	width: 7.5rem;
+	height: 0.4rem;
+	background: #ccc;
+}
+/* 222头部标题部分*/  
+#header{
+	width: 7.5rem;
+	height: 0.66rem;
+	line-height: 0.88rem;
+	margin-top: 0.22rem;
+	display: flex;
+	justify-content:space-between;
+	background: #fff;
+}
+#header a.left{
+	display: block;
+	width: 0.51rem;
+	height: 0.66rem;
+
+}
+#header a.left img{
+	display: block;
+	width: 0.51rem;
+	height: 0.66rem;
+}
+
+#header .center{
+	width: 4.5rem;
+	height: 0.66rem;
+	display: flex;
+}
+#header .center a{
+	display: block;
+	width: 1.5rem;
+	height: 0.65rem;
+	
+	font-size: 0.28rem;
+	text-align: center;
+	color: #A3A3A3;
+	vertical-align: top;
+	line-height: 0.33rem;
+}
+#header .center a.active{
+	color:#FB7B16;
+	border-bottom:0.04rem solid #FB7B16;
+}
+#header a.right{
+	display: block;
+	width: 0.62rem;
+	height: 0.66rem;
+	
+}
+#header a.right img{
+	display: block;
+	width: 0.62rem;
+	height: 0.66rem;
+}
+/* 333没有订阅提示*/ 
+.nofollow{
+	width: 7.5rem;
+	height: 0.78rem;
+	background: #F7F7F7;
+	font-size: 0.2rem;
+	color:#A1A1A1;
+	text-align: center;
+	line-height: 0.78rem;
+}
+.nofollow img{
+	width: 0.24rem;
+	height: 0.24rem;
+	vertical-align: middle;
+}
+
+/* 444推荐head*/ 
+.recommenthead{
+	width: 7.5rem;
+	height: 0.8rem;
+	border-bottom: 0.01rem solid #F7F7F7;
+	line-height: 0.8rem;
+	font-size: 0.28rem;
+	text-indent: 0.2rem;
+	color:#363636;
+	background: #fff;
+}
+
+/* 555推荐列表*/ 
+.recomment{
+	background: #fff;
+}
+.recomment .item{
+	width: 7.5rem;
+	height: 1.28rem;
+}
+.recomment .item img{
+	display: block;
+	float: left;
+	width: 0.82rem;
+	height: 0.82rem;
+	border-radius: 50%;
+	margin:0.2rem;
+}
+.recomment .item .center{
+	float: left;
+}
+.recomment .item .center .name{
+	font-size: 0.26rem;
+	color:#363636;
+	margin:0.3rem 0 0.14rem 0;
+}
+.recomment .item .center .pingjia{
+	font-size: 0.24rem;
+	color:#B4B4B4;
+}
+.recomment .item .center .pingjia .fensi{
+	float: left;
+}
+.recomment .item .center .pingjia .shipu{
+	text-indent: 0.2rem;
+	float: left;
+}
+
+.recomment .item .right{
+	float: right;
+	width: 0.94rem;
+	height: 0.44rem;
+	border:0.01rem solid #FDB456;
+	line-height: 0.44rem;
+	text-align: center;
+	font-size: 0.22rem;
+	color: #FDB456;
+	margin:0.42rem 0.22rem 0 0 ;
+}
+/* 666换一批推荐*/ 
+
+.huanyipi{
+	text-align: center;
+	font-size:0.26rem ;
+	color:#858585 ;
+	margin-top: 0.3rem;
+}
+.huanyipi img{
+	width: 0.36rem;
+	height: 0.36rem;
+	vertical-align: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 替代display:fixed占据屏幕位置*/ 
+#tonav{
+	width: 7.5rem;
+	height: 0.89rem;
+}
+/* 最低层的::tabs::4个*/ 
+#nav{
+	width: 7.5rem;
+	height: 0.89rem;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content:space-around;
+}
+
+#nav a{
+	display: block;
+	position: relative;
+	color: #ADADAD;
+}
+#nav a.active{
+	color: #FBB556;
+}
+#nav a img{
+	display: block;
+	width: 0.52rem;
+	height: 0.52rem;
+	margin: 0 0 0 0.08rem;
+	position: absolute;
+	top: 0.06rem;	
+}
+#nav a p{
+	font-size: 0.2rem;
+	text-align: center;
+	margin-top: 0.6rem;
+	// position: absolute;
+	// bottom: 0.08rem;
+}

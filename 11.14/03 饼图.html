@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+		}
+	</style>
+	<script type="text/javascript">
+	function d2h (n) {
+		return n * Math.PI / 180;
+	}
+	window.onload = function () {
+		var oCanvas = document.getElementById('c');
+
+		var gd = oCanvas.getContext('2d');
+
+		gd.beginPath();
+
+		gd.moveTo(300,300);
+		gd.arc(300,300,100,0,d2h(90),false);
+		gd.fillStyle = 'red';
+		gd.fill();
+
+		gd.beginPath();
+
+		gd.moveTo(300,300);
+		gd.arc(300,300,100,d2h(90),d2h(135),false);
+		gd.fillStyle = 'blue';
+		gd.closePath();
+		gd.fill();
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id='c'></canvas>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+		}
+	</style>
+
+</head>
+<body>
+	<canvas width="800" height="500" id='c'></canvas>
+</body>
+<script type="text/javascript">
+	//创建画布和画笔
+	var oCanvas = document.getElementById('c');
+	var pen = oCanvas.getContext('2d')
+	//通过js来创建一张图片
+	var oImg = new Image();
+	oImg.src = 'coinAni2.png'
+	console.log(oImg)
+	oImg.onload = function(){
+		var d = 0
+		setInterval(function(){
+			//在画图之前,需先清空画布
+			//此时,画笔就是橡皮擦了
+			pen.clearRect(0,0,oCanvas.width,oCanvas.height)
+			//有一个开始新路径的操作//但是测试发现也没神马用处
+			pen.beginPath()
+			pen.drawImage(oImg,0,60*d,60,60,100,100,60,60)
+			d++
+			if(d>=10){
+				d=0
+			}
+		},100)
+		
+	}
+
+
+
+
+
+// var oImg = new Image();
+
+// oImg.src = 'coinAni2.png';
+// document.body.appendChild(oImg);
+// // oImg.onload = function(){
+// // 	document.body.appendChild(oImg);
+// // }
+
+
+
+</script>
+</html>

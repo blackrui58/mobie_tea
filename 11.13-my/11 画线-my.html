@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			text-align: center;
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+			/*width: 500px;
+			height: 500px;*/
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function () {
+		// 一,获取画布
+		var oCanvas = document.getElementById('c');
+		//二,创建画笔//通过画布来创建画笔//画笔也称为上下文
+		var oC = oCanvas.getContext('2d');
+		//三,对画笔开始操作
+		//1.开始一次新的路径
+		oC.beginPath();
+		//2.起点
+		oC.moveTo(100,100);
+		//3.连线到
+		oC.lineTo(200,200);
+		oC.lineTo(100,200);
+		oC.lineTo(200,300);
+		oC.closePath()
+
+		//在划线操作之前进行画笔的相关设置,如颜色,宽高等
+		oC.lineWidth = 10;
+		oC.strokeStyle = "red";
+		//填充的相关配置
+		oC.fillStyle = "orange"
+
+		//先填充还是先划线,会产生一个谁覆盖谁的问题,具体看需求
+		
+		//填充操作
+		oC.fill()
+		//划线操作
+		oC.stroke()
+
+
+
+
+		//开始一次新的划线
+		oC.beginPath()
+		oC.moveTo(400,400)
+		oC.lineTo(500,500)
+		oC.closePath()
+		oC.lineWidth = 20;
+		oC.stroke()
+
+
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id="c">浏览器不支持显示</canvas>
+</body>
+</html>

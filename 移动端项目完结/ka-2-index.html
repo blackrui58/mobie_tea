@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>启动页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/ka-2-index.css">
+
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var mySwiper_1 = new Swiper ('.swiper-container-1', {
+			    direction: 'horizontal',
+			    loop: true,
+			    
+			    // 如果需要分页器
+			    pagination: '.swiper-pagination',
+			    // 如果需要滚动条
+			    scrollbar: '.swiper-scrollbar',
+		  	})
+
+		  	var mySwiper_2 = new Swiper ('.swiper-container-2', {
+				slidesPerView: 3,
+			    spaceBetween: 30,
+			    pagination: {
+			        el: '.swiper-pagination',
+			        clickable: true,
+			      },
+			    loop: true,
+			    
+			    // 如果需要分页器
+			    pagination: '.swiper-pagination',// 如果需要滚动条
+			    scrollbar: '.swiper-scrollbar',
+		  	})
+
+
+
+  
+
+		}
+	</script>
+</head>
+
+<body>
+<div id="app">
+	<!-- 系统头部 -->
+	<div id="phonetop">
+		
+	</div>
+	<!-- 头部搜索框::消息框::购物车 -->
+	<div id="top">
+		
+			<div class="message">
+				<img src="img/message.jpg">
+			</div>
+			<div class="search">
+				<img src="img/search.jpg">
+				<input type="text" name="" placeholder="搜索">
+			</div>
+			<div class="goodscar">
+				<img src="img/goodscar.jpg">
+			</div>
+			
+	</div>
+
+	<!-- 第一个轮播图 -->
+	<div id="swiper_first">
+		<div class="swiper-container-1">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">	
+		        	<img src="img/swiper_1.jpg">
+		        </div>
+		        <div class="swiper-slide">
+		        	<img src="img/swiper_1.jpg">
+		        </div>
+		        <div class="swiper-slide">	
+		        	<img src="img/swiper_1.jpg">
+		        </div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		    
+
+		    
+		    <!-- 如果需要滚动条 -->
+		    <div class="swiper-scrollbar"></div>
+		</div>
+	</div>
+
+	<!-- 商品分类 -->
+	<div id="sort">
+		<ul class="sortcont">
+			<li>
+				<a href="#">
+					<img src="img/sort_1.jpg">
+					<p>瓜子</p>
+				</a>				
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/sort_2.jpg">
+					<p>腰果</p>
+				</a>				
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/sort_3.jpg">
+					<p>花生</p>
+				</a>				
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/sort_4.jpg">
+					<p>核桃</p>
+				</a>				
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/sort_5.jpg">
+					<p>开心果</p>
+				</a>				
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/sort_6.jpg">
+					<p>榛子</p>
+				</a>				
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/sort_7.jpg">
+					<p>栗类制品</p>
+				</a>				
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/sort_8.jpg">
+					<p>更多</p>
+				</a>				
+			</li>
+			
+		</ul>
+	</div>
+
+	<!-- vip商品 -->
+	<div id="vip">
+		<a href="#" class="left">
+			<img src="img/vip_left.jpg">
+		</a>
+		<div class="right">
+			<a href="#" class="top">
+				<img src="img/vip_right_top.jpg">
+			</a>
+			<a href="#" class="bottom">
+				<img src="img/vip_right_bottom.jpg">
+			</a>			
+		</div>	
+	</div>
+
+	<!-- 限时 -->
+	<div id="xianshi">
+		<div class="top">
+			<div class="topcont">
+				<div class="left">
+				&nbsp;限时特价
+				</div>
+				<div class="right">
+					<p>剩余时间&nbsp;</p>
+					<span>08</span>
+					<i>:</i>
+					<span>35</span>
+					<i>:</i>				
+					<span>50</span>
+				</div>
+			</div>			
+		</div>
+		<!-- 第二个轮播图 -->
+		<div class="bottom">
+			<div class="swiper-container-2">
+			    <div class="swiper-wrapper">
+			    	
+			        <div class="swiper-slide">	
+			        	<img src="img/swiper_se_1.jpg">
+			        </div>
+			        <div class="swiper-slide">	
+			        	<img src="img/swiper_se_2.jpg">
+			        </div>
+			        <div class="swiper-slide">
+			        	<img src="img/swiper_se_3.jpg">
+			        </div>
+			        <div class="swiper-slide">	
+			        	<img src="img/swiper_se_2.jpg">
+			        </div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>			    
+			    <!-- 如果需要滚动条 -->
+			    <div class="swiper-scrollbar"></div>
+			</div>
+		</div><!-- 第二个轮播图::end -->
+	</div>
+	<!-- 新品 -->
+	<div id="xinping">
+		<div class="top">
+			<img src="img/xinping_top.jpg">
+		</div>
+		<ul class="bottom clearfix">
+			<li>
+				<a href="#">
+					<img src="img/xinping_1.jpg">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinping_2.jpg">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinping_2.jpg">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinping_1.jpg">
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 底部:::tabs -->
+	<footer id="foottab">
+		<div id="footcontent">
+			<a href="ka-2-index.html" class="left">
+				<img src="img/shouye.jpg">
+				<p>首页</p>
+			</a>
+			<a href="ka-3-collect.html" class="center">
+				<img src="img/shoucang.jpg">
+				<p>收藏</p>
+			</a>
+			<a href="ka-4-my.html" class="right">
+				<img src="img/my.jpg">
+				<p>我的</p>
+			</a>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

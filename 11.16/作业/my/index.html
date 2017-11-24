@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟</title>
+	<style type="text/css">
+		body{
+			width: 100%;
+			background: #ccc;
+		}
+		#box{
+			margin:0 auto;
+			width: 500px;
+			height: 500px;
+			position: relative;
+			transition: 1s all ease;
+		}
+		img{
+			width: 500px;
+			height: 500px;
+		}
+		.circle{
+			width: 20px;
+			height: 20px;
+			background: #666;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			margin-top: -18px;
+			margin-left: -10px;
+			border-radius: 50%;
+			background: -webkit-radial-gradient(circle,#fff,#000);
+		}
+
+		.seconds{
+			width: 5px;
+			height: 230px;
+			background: red;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top:-8px;
+			margin-left: -2px;			
+			border-radius: 2px 2px 50% 50%;
+
+			transform: rotate(180deg);
+			transform-origin: top center;
+		}
+		.minutes{
+			width: 8px;
+			height: 200px;
+			background: blue;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top:-8px;
+			margin-left: -4px;
+			border-radius: 4px 4px 50% 50%;
+
+			transform: rotate(180deg);
+			transform-origin: top center;
+		}
+		.hours{
+			width: 12px;
+			height: 150px;
+			background: #ccc;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top:-8px;
+			margin-left: -6px;
+			border-radius: 6px 6px 50% 50%;
+
+			transform: rotate(180deg);
+			transform-origin: top center;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var seconds = document.getElementsByClassName('seconds')[0];
+			var minutes = document.getElementsByClassName('minutes')[0];
+			var hours = document.getElementsByClassName('hours')[0];
+			seconds.onclick = function(){
+				alert(1)
+			}
+			
+			function toTime(){
+				var time = new Date()
+				//获取当前的时间
+				var h = time.getHours();
+				var m = time.getMinutes();
+				var s = time.getSeconds();
+				console.log(h,m,s)
+				hours.style.transform = "rotate(" + (30*h + m*0.5 + s*0.5/60 +180) + "deg)"
+				minutes.style.transform = "rotate(" + (6*m + 0.1*s +180) + "deg)"
+				seconds.style.transform = "rotate(" + (6*s +180) + "deg)"
+				// seconds.style.transform = rotate( deg)
+				console.log(hours.style.transform)
+				console.log(30*h + s*0.5/60)
+				
+			}
+			setInterval(toTime,1000)
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+		<img src="pan.jpg">
+		<div class="circle"></div>
+		<div class="seconds"></div>
+		<div class="minutes"></div>
+		<div class="hours"></div>
+	</div>
+</body>
+</html>

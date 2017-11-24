@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+		svg {
+			background: #fff;
+		/*	opacity: 0.5;
+			filter: opacity(alpha=50);*/
+		}
+		image {
+			filter: url(#);
+		}
+	</style>
+</head>
+<body>
+	<svg width="800" height="500">
+		<!-- 定义好了滤镜 -->
+		<defs>
+			<filter id="Gaussian_Blur">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+			</filter>
+		</defs>
+		<image x="0" y="0" width="200" height="200" xlink:href="1.jpg"></image>
+		<circle cx="100" cy="100" r="50" fill="red" style="filter: url(#Gaussian_Blur)"></circle>
+	</svg>
+</body>
+</html>

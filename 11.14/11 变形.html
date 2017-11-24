@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+		}
+	</style>
+	<script type="text/javascript">
+	function d2h (n) {
+		return n * Math.PI / 180;
+	}
+	function random (n,m) {
+		return Math.floor(Math.random() * (m - n) + n );
+	} 
+	window.onload = function () {
+		var oCanvas = document.getElementById('c');
+
+		var gd = oCanvas.getContext('2d');
+
+		gd.beginPath();
+
+		// gd.strokeRect(100,100,100,100);
+
+		// 先变形,再画图
+		// gd.scale(2,2);
+		// gd.rotate(d2h(30));
+		// gd.translate(100,100);
+		// gd.strokeStyle = 'red';
+		// gd.strokeRect(100,100,100,100);
+		// gd.fillStyle = 'rgba(0,0,0,0.5)';
+		// gd.fillRect(0,0,oCanvas.width,oCanvas.height);
+
+		// 变形叠加
+		gd.scale(2,2);
+		gd.translate(100,100)
+		gd.strokeRect(100,100,100,100);
+			
+
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id='c'></canvas>
+</body>
+</html>

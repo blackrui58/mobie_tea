@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+		svg {
+			background: #fff;
+		}
+		
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oSvg = document.getElementsByTagName('svg')[0];
+			//在传统的chuangjian元素的js操作是//这种方式创建的元素,在控制台看来是已经添加成功了,但是没有真正显示出来
+			// var rect = document.createElement('rect')
+			//通过命名空间的创建方式来创建svg元素
+			var rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+			//给元素设置相关属性
+			rect.setAttribute('x',100)
+			rect.setAttribute('y',100)
+			rect.setAttribute('width',200)
+			rect.setAttribute('height',200)
+			rect.setAttribute('fill','orange')
+			//将创建的元素追加到页面中去
+			oSvg.appendChild(rect)
+		}
+	</script>
+</head>
+<body>
+	<svg width="800" id="svg" height="500">
+		
+
+	</svg>
+</body>
+</html>

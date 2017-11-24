@@ -1,0 +1,139 @@
+/* 111最顶端::无用部分*/ 
+#none{
+	width: 7.5rem;
+	height: 0.4rem;
+	background: #ccc;
+}
+/* 222头部标题部分*/ 
+#header{
+	width: 7.5rem;
+	height: 0.88rem;
+	background: #fff;
+	line-height: 0.88rem;
+	text-align: center;
+	font-size: 34px;
+}
+/* 333顶部轮播图*/ 
+.swiper-container-1{
+	width: 7.5rem;
+    height: 3.2rem;
+    position: relative;
+}
+.swiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets{
+	position: absolute;
+	bottom: 0;
+}
+.swiper-container-1 .swiper-wrapper{
+	width: 7.5rem;
+    height: 3.2rem;
+}
+.swiper-container-1 .swiper-slide a{
+	display: block;
+	width: 7.5rem;
+    height: 3.2rem;
+}
+.swiper-container-1 .swiper-slide img{
+	width: 7.5rem;
+    height: 3.2rem;
+}
+/* 444分类食谱*/ 
+#sort{
+	width: 7.5rem;
+	height: 3.15rem;
+	background: #fff;
+}
+#sort .top{
+	width: 7.5rem;
+	height: 0.87rem;
+	background: #F7F7F7;
+	line-height: 0.87rem;
+	text-align: center;
+	font-size: 0.28rem;
+}
+#sort .bottom{
+	width: 7.5rem;
+	height: 1.77rem;
+	margin-top: 0.26rem;
+}
+
+#sort .bottom .swiper-slide img{
+	width: 1.77rem;
+	height: 1.77rem;
+}
+/* 最低层的::tabs::4个*/ 
+#choice{
+	width: 7.5rem;
+	height: 4.75rem;
+}
+#choice .top{
+	width: 7.5rem;
+	height: 0.8rem;
+	background: #F7F7F7;
+	text-align: center;
+	line-height: 0.8rem;
+	font-size: 0.28rem;
+	margin-bottom: 0.25rem;
+}
+#choice a{
+	display: block;
+		
+}
+#choice a img{
+	width: 7.5rem;
+	height: 3.7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 替代display:fixed占据屏幕位置*/ 
+#tonav{
+	width: 7.5rem;
+	height: 0.89rem;
+}
+/* 最低层的::tabs::4个*/ 
+#nav{
+	width: 7.5rem;
+	height: 0.89rem;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content:space-around;
+}
+
+#nav a{
+	display: block;
+	position: relative;
+	color: #ADADAD;
+}
+#nav a.active{
+	color: #FBB556;
+}
+#nav a img{
+	display: block;
+	width: 0.52rem;
+	height: 0.52rem;
+	margin: 0 0 0 0.08rem;
+	position: absolute;
+	top: 0.06rem;	
+}
+#nav a p{
+	font-size: 0.2rem;
+	text-align: center;
+	margin-top: 0.6rem;
+	// position: absolute;
+	// bottom: 0.08rem;
+}

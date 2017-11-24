@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+	<title>引导页</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/sharenew.css">
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" >
+	window.onload = function(){
+		// 顶部第一个轮播图
+		var mySwiper = new Swiper ('.swiper-container-1', {
+		    direction: 'horizontal',
+		    loop: true,		    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',  
+
+		})  
+	}
+	</script>
+</head>
+<body>
+<!-- 111最顶端::无用部分 -->
+<div id="none"></div>
+
+<!-- 222头部标题部分 -->
+<div id="header">
+	<a href="#" class="left">
+		<img src="img/jia.jpg">
+	</a>
+	<div class="center">
+		<a href="sharefollow.html" class="first active">
+			关注
+		</a>
+		<a href="sharenew.html" class="second">
+			最新
+		</a>
+		<a href="#" class="three">
+			发现
+		</a>
+	</div>
+	<a href="#" class="right">
+		<img src="img/search.jpg">
+	</a>
+</div>
+<!-- 333顶部轮播图 -->
+<div class="swiper-container-1">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+			<a href="#">
+        		<img src="img/sharenew.jpg">
+        	</a>  
+        </div>
+        <div class="swiper-slide">
+        	<a href="#">
+        		<img src="img/sharenew.jpg">
+        	</a>  
+        </div>
+        <div class="swiper-slide">
+        	<a href="#">
+        		<img src="img/sharenew.jpg">
+        	</a>        	
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- 444评论部分 -->
+<div id="assess">
+	<div class="content">
+		<div class="item">
+			<div class="cont">
+				<div class="head clearfix">
+					<img src="img/icon_1.jpg" class="left">
+					<div class="right">
+						<div class="name">西提娅</div>
+						<div class="tag">
+							<span>
+								&lt;&lt;海锦蛋糕&gt;&gt;
+							</span>
+							<span>
+								#元气早餐
+							</span>
+							<span>
+								/ 34分钟前
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="p">将中餐的葱油于西餐的完美的集合在一起,味道很不错</div>
+				<div class="imgs">
+					<img src="img/img_img_1.jpg" alt="">
+					<img src="img/img_img_2.jpg" alt="">
+					<img src="img/img_img_3.jpg" alt="">
+				</div>
+				<div class="sum">
+					<div class="xinpinlun">
+						<img src="img/xin.jpg" alt=""><span>179</span>
+					</div>
+					<div class="xinpinlun">
+						<img src="img/pinlun.jpg" alt=""><span>52</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="item">
+			<div class="cont">
+				<div class="head clearfix">
+					<img src="img/icon_1.jpg" class="left">
+					<div class="right">
+						<div class="name">西提娅</div>
+						<div class="tag">
+							<span>
+								&lt;&lt;海锦蛋糕&gt;&gt;
+							</span>
+							<span>
+								#元气早餐
+							</span>
+							<span>
+								/ 34分钟前
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="p">将中餐的葱油于西餐的完美的集合在一起,味道很不错</div>
+				<div class="imgs">
+					<img src="img/img_img_1.jpg" alt="">
+					<img src="img/img_img_2.jpg" alt="">
+					<img src="img/img_img_3.jpg" alt="">
+				</div>
+				<div class="sum">
+					<div class="xinpinlun">
+						<img src="img/xin.jpg" alt=""><span>179</span>
+					</div>
+					<div class="xinpinlun">
+						<img src="img/pinlun.jpg" alt=""><span>52</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- 替代display:fixed占据屏幕位置 -->
+<div id="tonav"></div>
+<!-- 最低层的::tabs::4个 -->
+<nav id="nav">
+	<a href="study.html" class="active">
+		<img src="img/study.jpg">
+		<p>学烘焙</p>
+	</a>
+	<a href="story.html">
+		<img src="img/story.jpg">
+		<p>有故事</p>
+	</a>
+	<a href="sharenew.html">
+		<img src="img/share.jpg">
+		<p>分享圈</p>
+	</a>
+	<a href="myhome.html">
+		<img src="img/myhome.jpg">
+		<p>焙小窝</p>
+	</a>
+</nav>
+</body>
+</html>

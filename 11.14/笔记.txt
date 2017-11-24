@@ -1,0 +1,294 @@
+video audio
+controls: 控制器
+loop: 循环播放
+poster: 海报
+src: 资源
+video
+	source src
+/video
+
+js:
+play(): 播放
+pause(): 暂停
+paused: 是否暂停
+currentTime: 当前时间
+duration: 总时间
+
+webkitRequestFullScreen: 全屏
+
+webkitFullScreenChange: 全屏事件
+
+timeupdate: 播放时间改变
+
+表单的新属性:
+min  max  required  pattern  autocomplete="off" 
+关闭表单自动验证: novalidate
+新的type值: number time date email range
+
+选择器
+
+:nth-child(): 下标从1开始,odd,even
+:first-child
+:last-child
+
+:first-letter
+:first-line
+:after
+:before  (结合content属性使用)
+
+获取元素的方式:
+id,className,tagName,
+querySelectorAll(选择器): 多个值
+querySelector(选择器): 一个值
+
+oDiv.classList.add(): 添加类名
+oDiv.classList.remove(): 删除类名
+oDiv.classList.toggle():有就删除,无则添加
+
+h5允许用户自定义属性: data-属性名 
+oDiv.dataset.属性
+---------------------------------------------------------
+
+canvas绘图:
+1.beginPath()
+
+2.moveTo(x,y)
+
+3.lineTo(x,y)
+	lineWidth  strokeStyle fillStyle
+4.stroke fill
+
+5.closePath()
+
+画矩形: strokeRect(x,y,w,h)   fillRect(x,y,w,h)  直接画出矩形
+
+画弧: arc(cx,cy,r,start,end,false): 弧度制
+
+角度转弧度:
+function d2h (n) {
+	return n * Math.PI / 180
+}
+
+
+画图片: drawImage(image对象,x,y): 画到画布的某个位置,图片是原图大小
+
+		drawImage(image对象,x,y,w,h): 画到画布的某个位置,图片是w,h
+
+		drawImage(image对象,sx,sy,sw,sh,dx,dy,dw,dh): 把原图上的某个位置的图形放画到画布的某个位置上去
+
+		s: source: 原图
+		d: 目标: 目标的大小控制了图片的显示大小
+
+原图: 17 196 110 150
+
+目标位置: 100 100 110 150
+
+画文字:
+gd.font = '字体大小 字体类型' 'font-size font-family'
+strokeText(str,x,y)
+fillText(str,x,y): x,y是文字的左下角
+
+文字的排列方式:
+水平排列: textAlign  left  center right
+垂直排列: textBaseline  top middle  bottom(默认值)
+
+要把文字显示在某个位置,设置该点的坐标,然后改变水平排列或者垂直排列的值
+
+扩展: canvas的变形,对应的是css3的变形  scale(缩放)  translate()  rotate
+
+scale(x,y): 原来的x坐标 * x 原来的宽 * x, 
+			原来的y坐标 * y 原来的高 * y
+
+			x,y必须同时存在 
+rotate(弧度): 参考点是以画布的左上角为参考点的
+
+translate(x,y): 移动的是画布
+
+在css里面,变形是被覆盖的;
+在canvas里面,变形是叠加的
+
+
+
+flybird: 
+
+画图
+canvas: 位图,由像素点构成,放大失真
+	没有属性,没有事件,放大失真,通过js进行绘图
+	性能非常高,适合用于做一些小游戏
+
+svg: 矢量图,放大不失真
+	有属性,有事件,完全通过标签进行画图的
+	适合用于做交互性质比较多的
+
+画线: line:
+x1,y1,x2,y2: 代表两个点坐标
+属性:
+stroke: 线的颜色 red
+stroke-width: 线的宽度
+样式属性来用:
+stroke: red;
+stroke-width: 10px;
+fill: yellow;
+fill-opacity: 1;
+
+画矩形
+rect: x,y,width,height  默认是填充的,而且是黑色填充
+
+fill: 设置的是填充色 设置为none,就不填充了
+fill-opacity: 填充的透明度
+stroke-opacity: 线的透明度
+
+画圆:
+circle: cx cy r
+
+椭圆:
+ellipse: cx cy rx: 水平半径  ry: 垂直半径
+
+画文字
+text
+
+画图片
+image: x,y,width,height,xlink:href(图片路径)
+
+画多边形:
+polygon: points="x,y x,y x,y"
+
+滤镜效果
+feBlend
+feColorMatrix
+feComponentTransfer
+feComposite
+feConvolveMatrix
+feDiffuseLighting
+feDisplacementMap
+feFlood
+feGaussianBlur
+feImage
+feMerge
+feMorphology
+feOffset
+feSpecularLighting
+feTile
+feTurbulence
+feDistantLight
+fePointLight
+feSpotLight
+
+<defs>
+<filter id="Gaussian_Blur">
+<feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+</filter>
+</defs>
+
+
+js操作标签的属性,不能通过点语法,应该通过:
+getAttribute(属性名)
+setAttribute(属性名,属性值)
+通过js去创建svg里面的标签的时候,使用createElement无效,应该使用createElementNS(命名空间,标签名字)
+
+NS: name space 命名空间
+
+SVG: http://www.w3.org/2000/svg
+普通标签: http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd
+
+变形: transform="rotate"  translate  scale
+
+rotate(度数,x,y): 以x,y坐标作为参考点转动
+
+也可以使用css3的transform,用法一致
+
+canvas的连接点: lineJoin
+canvas的断点: lineCap
+
+svg的连接点: stroke-linejoin
+svg的端点: stroke-linecap
+
+路径绘图: 只要有坐标,就能画任意的东西
+path
+d: 坐标位置 M(moveTo)  L(lineTo)   Z(closePath)
+
+作业: 实现一个矩形按照中心点旋转
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

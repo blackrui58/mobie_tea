@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+	window.onload = function () {
+		var oV = document.getElementById('v');
+
+		var oPlay = document.getElementById('play');
+
+		var oJ = document.getElementById('kuaijin');
+
+		var jia = document.getElementById('jia');
+
+		var jingyin = document.getElementById('jingyin');
+
+		var quanping = document.getElementById('quanping');
+
+
+		oPlay.onclick = function(){
+			//oV.paused:::是否暂停,得到布尔值
+			//oV.pause():::暂停操作
+			//oV.play():::开始操作
+			if(oV.paused){
+				oV.play()
+				this.innerHTML = '播放'
+			}else{
+				oV.pause()
+				this.innerHTML = '暂停'
+			}
+
+		}
+		// oPlay.onclick = function () {
+			
+		// 	if (oV.paused) {
+		// 		// 暂停状态
+		// 		// 播放
+		// 			oV.play();
+		// 			this.innerHTML = '暂停'
+		// 		} else {
+		// 			oV.pause();
+		// 			this.innerHTML = '播放'
+		// 		}
+
+		// }
+		oJ.onclick = function () {
+			// 当前播放时间//oV.currentTime用来获取当前时间
+			oV.currentTime += 2
+			// 快退就--
+			console.log(oV.currentTime);
+		}
+		// oJ.onclick = function () {
+		// 	// 当前播放时间
+		// 	oV.currentTime++;
+		// 	// 快退就--
+		// 	console.log(oV.currentTime);
+		// }
+
+		jia.onclick = function () {
+			console.log(oV.volume)
+			// 当前音量//oV.volume可以获取到当前音量,并通过对该属性进行控制来控制音量//其范围是0--1
+			oV.volume -= 0.1;
+			if(oV.volume < 0){
+				oV.volume = 0
+			}
+	
+		}
+
+		// jia.onclick = function () {
+		// 	// 当前音量
+		// 	oV.volume -= 0.1;
+		// 	if (oV.volume <= 0) {
+		// 		oV.volume = 0;
+		// 	}
+		// }
+
+
+		//静音控制
+		jingyin.onclick = function () {
+			console.log(oV.muted);
+			// 此时静音状态
+			oV.muted = !oV.muted
+			console.log(oV.muted);
+		}
+
+		// jingyin.onclick = function () {
+		// 	// 此时静音状态
+		// 	oV.muted = !oV.muted;
+		// 	console.log(oV.muted);
+		// }
+		quanping.onclick = function () {
+			//这里需要一个兼容性处理
+			//针对不同内核的浏览器来进行兼容性处理
+			if (oV.requestFullScreen) {
+				oV.requestFullScreen()
+			}else if(oV.webkitRequestFullScreen){
+				oV.webkitRequestFullScreen()
+			}else if(oV.mozRequestFullScreen){
+				oV.mozRequestFullScreen()
+			}
+			// 全屏
+			// oV.webkitRequestFullScreen();
+			// oV.mozRequestFullScreen();
+			// IE
+			// oV.requestFullScreen();
+
+			// if (oV.requestFullScreen) {
+			// 	oV.requestFullScreen();
+			// } else if (oV.webkitRequestFullScreen) {
+			// 	oV.webkitRequestFullScreen();
+			// } else if (oV.mozRequestFullScreen) {
+			// 	oV.mozRequestFullScreen();
+			// }
+
+		}
+
+		// quanping.onclick = function () {
+		// 	// 全屏
+		// 	// oV.webkitRequestFullScreen();
+		// 	// oV.mozRequestFullScreen();
+		// 	// IE
+		// 	// oV.requestFullScreen();
+
+		// 	if (oV.requestFullScreen) {
+		// 		oV.requestFullScreen();
+		// 	} else if (oV.webkitRequestFullScreen) {
+		// 		oV.webkitRequestFullScreen();
+		// 	} else if (oV.mozRequestFullScreen) {
+		// 		oV.mozRequestFullScreen();
+		// 	}
+
+		// }
+
+	}
+	</script>
+</head>
+<body>
+	<video src="环保小视频.mp4" id="v" autoplay loop></video>
+	<div>
+		<button id="play">播放</button>
+		<button id="kuaijin">快进</button>
+		<button id="kuaitui">快退</button>
+		<button id="jia">++</button>
+		<button id="jian">--</button>
+		 <button id="jingyin">静音</button>
+		 <button id="quanping">全屏</button>
+	</div>
+</body>
+</html>

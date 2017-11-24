@@ -1,0 +1,238 @@
+/* 111最顶端::无用部分*/ 
+#none{
+	width: 7.5rem;
+	height: 0.4rem;
+	background: #ccc;
+}
+/* 222头部标题部分*/ 
+#header{
+	width: 7.5rem;
+	height: 0.66rem;
+	line-height: 0.88rem;
+	margin-top: 0.22rem;
+	display: flex;
+	justify-content:space-between;
+}
+#header a.left{
+	display: block;
+	width: 0.51rem;
+	height: 0.66rem;
+
+}
+#header a.left img{
+	display: block;
+	width: 0.51rem;
+	height: 0.66rem;
+}
+
+#header .center{
+	width: 4.5rem;
+	height: 0.66rem;
+	display: flex;
+}
+#header .center a{
+	display: block;
+	width: 1.5rem;
+	height: 0.65rem;
+	
+	font-size: 0.28rem;
+	text-align: center;
+	color: #A3A3A3;
+	vertical-align: top;
+	line-height: 0.33rem;
+}
+#header .center a.active{
+	color:#FB7B16;
+	border-bottom:0.04rem solid #FB7B16;
+}
+#header a.right{
+	display: block;
+	width: 0.62rem;
+	height: 0.66rem;
+	
+}
+#header a.right img{
+	display: block;
+	width: 0.62rem;
+	height: 0.66rem;
+}
+
+/* 333顶部轮播图*/ 
+.swiper-container-1{
+	width: 7.5rem;
+    height: 3.87rem;
+    position: relative;
+}
+.swiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets{
+	position: absolute;
+	bottom: 0;
+}
+.swiper-container-1 .swiper-wrapper{
+	width: 7.5rem;
+    height: 3.87rem;
+}
+.swiper-container-1 .swiper-slide a{
+	display: block;
+	width: 7.5rem;
+    height: 3.87rem;
+}
+.swiper-container-1 .swiper-slide img{
+	width: 7.5rem;
+    height: 3.87rem;
+}
+
+/* 444评论部分*/ 
+#assess{
+	width: 7.5rem;
+}
+#assess .content{
+	width: 7.5rem;
+	height: 4.16rem;
+	background: #F5F3F4;
+	overflow: hidden;
+}
+#assess .content .item{
+	width: 7.0rem;
+	height: 3.76rem;
+	background: #fff;
+	border-radius: 0.1rem;
+	margin: 0.23rem auto 0;
+}
+#assess .content .cont{
+	width: 6.66rem;
+	margin: 0 auto;
+	height: 3.76rem;
+}
+#assess .content .cont .head{
+	display: block;
+}
+#assess .content .cont .head img.left{
+	float: left;
+	width: 1.04rem;
+	height: 1.04rem;
+	transform: rotate(130deg);
+	border-radius: 50%;
+	margin-top: -0.22rem;
+}
+#assess .content .cont .head .right{
+	float: left;
+	margin: 0.2rem 0 0 0.16rem;
+	position: relative;
+	
+}
+#assess .content .cont .head .right .name{
+	font-size: 0.26rem;
+	#333333
+}
+#assess .content .cont .head .right .tag{
+	
+}
+#assess .content .cont .head .right .tag span{
+	display: block;
+	float: left;
+	margin-top: 0.06rem;
+	font-size: 0.2rem;
+	color:#ACACAC;
+}
+
+#assess .content .cont .p{
+	font-size: 0.26rem;
+	height: 0.74rem;
+	line-height: 0.74rem;
+}
+#assess .content .cont .imgs{
+	height: 1.2rem;
+}
+#assess .content .cont .imgs img{
+	width: 1.38rem;
+	height: 1.2rem;
+	display: block;
+	float: left;
+	margin-right: 0.3rem;
+}
+
+#assess .content .cont .sum{
+	height: 0.6rem;
+	border-top: 1px solid #ccc;
+	display: flex;
+	justify-content:space-around;
+	margin-top: 0.28rem;
+}
+#assess .content .cont .sum .xinpinlun{
+	margin-top: 0.20rem;
+}
+#assess .content .cont .sum .xinpinlun img{
+	display: block;
+	float: left;
+	width: 0.24rem;
+	height: 0.24rem;
+	margin-right: 0.1rem;
+}
+#assess .content .cont .sum .xinpinlun span{
+	display: block;
+	float: left;
+	font-size: 0.4rem;
+	color: #333333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 替代display:fixed占据屏幕位置*/ 
+#tonav{
+	width: 7.5rem;
+	height: 0.89rem;
+}
+/* 最低层的::tabs::4个*/ 
+#nav{
+	width: 7.5rem;
+	height: 0.89rem;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content:space-around;
+}
+
+#nav a{
+	display: block;
+	position: relative;
+	color: #ADADAD;
+}
+#nav a.active{
+	color: #FBB556;
+}
+#nav a img{
+	display: block;
+	width: 0.52rem;
+	height: 0.52rem;
+	margin: 0 0 0 0.08rem;
+	position: absolute;
+	top: 0.06rem;	
+}
+#nav a p{
+	font-size: 0.2rem;
+	text-align: center;
+	margin-top: 0.6rem;
+	// position: absolute;
+	// bottom: 0.08rem;
+}

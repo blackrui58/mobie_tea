@@ -1,0 +1,205 @@
+H5,C3: html5 css3  一些新标签  一些新样式
+12就可以使用,14年定制为标准
+IE9+
+
+SEO：搜索引擎优化   标签语义化
+新标签:
+nav  header  section  footer  看成是简单的div
+
+meter
+source: 资源
+
+浏览器前缀:
+Chrome,safria: webkit
+firefox: moz
+IE: m
+
+
+媒体标签:
+视频: video  (mp4(所有浏览器都兼容)  avi wmp  ogg)
+src: 视频的路径
+controls: 显示播放器
+autoplay: 自动播放
+loop: 循环播放
+poster: 海报
+
+自定义播放器: video对象
+播放 暂停   快进 快退  音量  静音  全屏：
+
+事件:
+ontimeupdate: 当时间更新的时候
+
+webkitfullscreenchange: 进入全屏的时候
+
+比例: 当前 / 总的
+
+视频的进度比例: 当前的时间 (currentTime)  / 总的时间 (duration)
+
+进度条的比例: top的宽 / bottom的宽 (已知)
+
+clientWidth:
+clientHeight: 内容宽高 + padding
+
+offsetWidth: 内容宽高 + border + padding
+offsetHeight:
+
+音频:
+audio 用法和video基本一致
+
+src: 音频的路径
+controls: 显示播放器
+autoplay: 自动播放
+loop: 循环播放
+poster: 海报
+
+base64: 图片 音频 视频
+
+表单:
+新增的属性
+placeholder: 占位
+
+required: 必要的
+
+autofocus: 自动聚焦
+
+autocomplete: off  去除自动补全效果
+
+pattern: 规则 (正则表达式)
+
+step: 步伐器
+
+min: 最小值
+max: 最大值
+
+type值: text  password  checkbox radio
+
+email
+number
+time
+date
+range
+
+步伐器: step
+
+自动校验: novalidate
+
+伪元素选择器:
+
+选择器的名字:nth-child(下标): 从1开始
+下标为odd: 奇数
+下标为even: 偶数
+选择器的名字:first-child  第一个
+选择器的名字:last-child 最后一个
+
+有关于文字的伪元素选择器
+
+选择器名字:first-letter: 第一个文字
+选择器名字:first-line: 第一行文字
+
+:after
+:before
+
+属性选择器: 选择器名[属性名=属性值]
+
+
+canvas  svg   css3的样式  移动端布局  bootstrap  大作业
+
+画布: canvas  画笔   没有js什么事情都干不了
+
+路径绘图
+
+宽高不应该由样式属性设置,而应该由标签属性设置
+
+画笔:
+var oC = oCanvas.getContext('2d');
+移动到某个点:
+oC.moveTo(x,y): 坐标点
+
+连线到某个点:
+oC.lineTo(x,y)
+
+连接线
+oC.stroke();
+
+填充:
+oC.fill()
+
+改变线条颜色:
+strokeStyle
+线宽: lineWidth
+
+开始路径:
+oC.beginPath()
+
+闭合路径: 从结oC.closePath()束点连接回起始点
+
+
+
+1.beginPath()
+2.设置点坐标
+  设置线宽,线的颜色,填充色
+3.画线(填充)
+
+只要有路径,就能画出东西
+
+1.理论上有路径,啥都能画
+2.太麻烦了
+
+画矩形: 
+strokeRect(x,y,w,h): 线条矩形
+fillRect(x,y,w,h): 填充矩形
+x,y表示左上角点坐标
+w,h: 宽高
+
+连接点: lineJoin
+miter: 默认值
+round: 圆角
+bevel: 斜切
+
+端点: lineCap
+
+butt: 默认值
+round: 圆角
+square: 方形
+
+画弧
+arc(cx,cy,r,start,end,true或者false)
+cx,cy: 圆心
+r: 半径
+start: 开始角度
+end: 结束角度
+false顺时针
+
+角度制  弧度制
+360       2PI
+180        PI
+90         PI/2
+N         n * PI / 180
+
+π: Math.PI
+
+
+
+导出图片:oCanvas.toDataURL();  base64
+
+png: image/png  默认
+jpeg: image/jpeg
+
+
+画布的运动(动画): 画出过程,擦除以前的
+
+clearRect(x,y,w,h): 清除一片矩形的区域 
+
+画布的性能贼好,不用考虑性能问题,canvas制作小游戏
+
+帧频: 60fps: 1秒钟刷新60次
+	  30fps: 1秒钟刷新30次
+动画:
+	60fps: 1000 / 60   = 16  17
+	30fps: 1000 / 30   = 33.333
+
+原型进度条注意点:
+1.角度转弧度
+2.起始角度和结束角度的关系:
+ 
+作业: 画图板,饼图: [90,89,67,79,55]

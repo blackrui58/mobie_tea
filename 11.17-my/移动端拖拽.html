@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var odiv = document.getElementsByTagName('div')[0];
+		// odiv.onclick = function(){
+		// 	alert(3)
+		// }
+		//没有和click对应的touch
+		//只有和clickdown 对应的 touchstart
+		odiv.addEventListener('touchstart',function(evt){
+			var touch = evt.touches[0];
+			//这里的x,y代表的是触摸点到元素左上角的距离
+			var x = touch.clientX - this.offsetLeft;
+			var y = touch.clientY - this.offsetTop;
+			console.log(x,y)
+			this.addEventListener('touchmove',function(evt){
+				var touchmove = evt.touches[0];
+				this.style.position = 'absolute';
+				this.style.left = touchmove.clientX - x +"px"
+				this.style.top = touchmove.clientY - y +"px"
+			},false)
+		},false)
+
+	}
+	</script>
+</head>
+<body>
+	<div>
+		
+	</div>
+</body>
+</html>
